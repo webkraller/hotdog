@@ -1,1 +1,34 @@
-initial
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotdog Culture</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body align="center">
+	<h1>Hotdog Culture</h1>
+    <h3 class="blink">#1 Site On The Internet For Hotdog Culture</h3>
+	<div class="sliding-background"></div>
+	<div class="hotdog-dance">
+		<button id="play-button" onclick="togglePlay()">&#9654; &#127789; &#127925;</button>
+		<audio id="music" autoplay loop>
+			<source src="https://hotdog-culture.s3.amazonaws.com/snapchat.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<script type="text/javascript">
+		var audio = document.getElementById("music");
+		var playButton = document.getElementById("play-button");
+		
+		function togglePlay() {
+		console.log(playButton);
+			if(audio.paused) {
+				playButton.innerHTML = "&#9208; &#127789; &#127925;";
+				audio.play();
+			} else {
+				playButton.innerHTML = "&#9654; &#127789; &#127925;";
+				audio.pause();
+			}
+		}
+	</script>
+  </body>
+</html>
